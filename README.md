@@ -1,3 +1,12 @@
+## Tech Stack
+
+Next.js, TypeScript, Chart.js, Django, Python
+
+## Approach
+
+- First, I created the backend and handled the serverside logic, mainly hardcoding the JSON for each HTTP route.
+- Then, it was on to creating the frontend components and creating the dashboard where I handle the API calls from the Django backend.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -5,6 +14,12 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
+cd client/
+
+# installing dependencies
+npm install
+
+# run server
 npm run dev
 # or
 yarn dev
@@ -12,6 +27,19 @@ yarn dev
 pnpm dev
 # or
 bun dev
+```
+
+Open another terminal to run the Django server:
+
+```bash
+cd server/
+
+# create virtual environment and install packages
+python3 -m venv .venv
+pip3 install -r requirements.txt
+
+cd backend/
+python3 manage.py runserver
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
